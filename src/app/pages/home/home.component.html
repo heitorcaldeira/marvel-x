@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<div class="home">
+  <div class="home__bar">
+    <app-home-bar
+      [formGroup]="formSearchGroup"
+    ></app-home-bar>
+  </div>
+
+  <app-home-list
+    *ngIf="!(charactersState$ | async)?.loading"
+    (clickCharacter)="onClickCharacter($event)"
+    [characters]="(charactersState$ | async)?.data"
+  >
+  </app-home-list>
+
+  <app-home-skeleton *ngIf="(charactersState$ | async)?.loading" [total]="10"></app-home-skeleton>
+
+  <div class="home__empty" *ngIf="!(charactersState$ | async)?.data.length && !(charactersState$ | async)?.loading">
+    Nenhum personagem encontrado com esse nome.
+  </div>
+</div>

@@ -1,0 +1,41 @@
+@import "src/assets/styles/variables";
+
+
+.home-list {
+  margin: 8px 0;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(1, 1fr);
+
+  .mat-card-header-text {
+    margin: 0 !important;
+  }
+
+  &__card {
+    cursor: pointer;
+    width: 100%;
+    img {
+      background: #ccc;
+    }
+
+    &__title {
+      width: 100%;
+      overflow: hidden;
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: $mobile) {
+  .home-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .home-list {
+    margin: 16px 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 16px;
+  }
+}

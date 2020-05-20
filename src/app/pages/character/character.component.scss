@@ -1,0 +1,19 @@
+@import "src/assets/styles/variables";
+
+.character {
+  margin: 8px;
+
+  a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .character {
+    margin: 16px;
+  }
+}

@@ -1,0 +1,32 @@
+@import "src/assets/styles/variables";
+
+.home {
+  margin: 8px;
+
+  &__empty {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &__bar {
+    width: 100%;
+  }
+
+  &__loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+
+@media screen and (min-width: $desktop) {
+  .home {
+    margin: 16px;
+
+    &__bar {
+      width: 50%;
+    }
+  }
+}

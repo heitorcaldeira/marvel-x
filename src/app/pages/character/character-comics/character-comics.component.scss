@@ -1,0 +1,17 @@
+@import "src/assets/styles/variables";
+
+.character-comics {
+  margin: 16px;
+
+  &__details {
+    h1 {
+      color: $primary
+    }
+
+    p {
+      font-style: italic;
+    }
+
+    margin: 0 16px;
+  }
+}

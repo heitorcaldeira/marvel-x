@@ -1,0 +1,30 @@
+@import "src/assets/styles/variables";
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+
+  img {
+    object-fit: cover;
+  }
+
+  &__details {
+    margin: 16px;
+
+    h1 {
+      color: $primary
+    }
+
+    p {
+      font-style: italic;
+    }
+  }
+}
+
+
+@media screen and (min-width: $tablet) {
+  .character-info {
+    flex-direction: row;
+  }
+}

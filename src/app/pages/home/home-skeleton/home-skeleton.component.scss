@@ -1,0 +1,62 @@
+@import "src/assets/styles/variables";
+
+.skeleton {
+  animation: skeletonFade 1.5s infinite;
+  margin: 8px 0;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(1, 1fr);
+
+  &__card {
+    &__header {
+      height: 60px;
+    }
+
+    &__img {
+      width: calc(100% + 32px);
+      height: 300px;
+      background: #ccc;
+      margin: 0 -16px 16px -16px
+    }
+
+    &__lines {
+      height: 20px;
+      background: #ccc;
+      margin: 6px 0;
+
+      &:nth-child(odd) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@keyframes skeletonFade {
+  from {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 30%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+
+@media screen and (min-width: $mobile) {
+  .skeleton {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .skeleton {
+    margin: 16px 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 16px;
+  }
+}
+

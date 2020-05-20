@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <mat-icon aria-hidden="false" aria-label="Logo">language</mat-icon>&nbsp;
+  <span>Marvel-X</span>
+  <span class="spacer"></span>
+  <a [routerLink]="['/']" *ngIf="back">
+    <mat-icon aria-hidden="false" aria-label="Voltar">arrow_back</mat-icon>
+  </a>
+</mat-toolbar>

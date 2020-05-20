@@ -1,0 +1,9 @@
+<div class="character-info">
+  <img alt="{{character?.name}}" *ngIf="character" [src]="character?.thumbnail.path + '/standard_fantastic.' + character?.thumbnail.extension " />
+  <div class="character-info__details">
+    <h1>{{character?.name}}</h1>
+    <p>Aparição em séries: {{character?.series.available}}</p>
+    <p>Aparição em quadrinhos: {{character?.comics.available}}</p>
+    <span>{{character?.description}}</span>
+  </div>
+</div>

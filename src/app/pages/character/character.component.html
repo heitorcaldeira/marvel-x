@@ -1,0 +1,26 @@
+<app-header [back]="true"></app-header>
+
+<div class="character">
+  <a [routerLink]="['/']">
+    <mat-icon aria-hidden="false" aria-label="Voltar">arrow_back</mat-icon>
+  </a>
+  <mat-card class="home-list__card">
+    <mat-tab-group animationDuration="0ms">
+      <mat-tab label="Dados do personagem">
+        <app-character-info [character]="(charactersState$ | async)?.selected"></app-character-info>
+      </mat-tab>
+
+      <mat-tab label="Algumas Séries">
+        <app-character-series
+          [series]="(charactersState$ | async)?.selected?.series"
+        ></app-character-series>
+      </mat-tab>
+
+      <mat-tab label="Alguns Quadrinhos">
+        <app-character-comics
+          [comics]="(charactersState$ | async)?.selected?.comics"
+        ></app-character-comics>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
