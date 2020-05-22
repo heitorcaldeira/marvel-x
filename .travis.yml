@@ -16,5 +16,6 @@ deploy:
   bucket: $S3_BUCKET
   skip_cleanup: true
   local-dir: dist/marvel-x
+  region: us-east-2
   on:
     branch: master
