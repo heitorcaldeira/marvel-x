@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeListComponent } from './home-list.component';
+import {SharedModule} from '../../../shared/shared.module';
 
 describe('HomeListComponent', () => {
   let component: HomeListComponent;
@@ -8,7 +9,10 @@ describe('HomeListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeListComponent ]
+      declarations: [ HomeListComponent ],
+      imports: [
+        SharedModule
+      ]
     })
     .compileComponents();
   }));

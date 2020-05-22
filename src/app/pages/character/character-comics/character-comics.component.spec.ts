@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CharacterComicsComponent } from './character-comics.component';
+import {SharedModule} from '../../../shared/shared.module';
 
 describe('CharacterComicsComponent', () => {
   let component: CharacterComicsComponent;
@@ -8,7 +9,10 @@ describe('CharacterComicsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CharacterComicsComponent ]
+      declarations: [ CharacterComicsComponent ],
+      imports: [
+        SharedModule
+      ]
     })
     .compileComponents();
   }));

@@ -23,7 +23,6 @@ describe('CharacterComponent', () => {
         RouterTestingModule,
         BrowserAnimationsModule
       ],
-      declarations: [CharacterComponent],
       providers: [
         CharactersEffects,
         provideMockActions(() => actions$),
@@ -59,6 +58,4 @@ describe('CharacterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('');
 });

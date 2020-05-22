@@ -45,7 +45,6 @@ describe('HomeComponent', () => {
           }
         }
       ],
-      declarations: [HomeComponent]
     })
       .compileComponents();
   }));
